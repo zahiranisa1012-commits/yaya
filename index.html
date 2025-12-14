@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Resep Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍽️ Resep Makanan</h1>
+    <input type="text" id="search" placeholder="Cari resep...">
+    <button onclick="logout()">Logout</button>
+</header>
+
+<main id="resep-container">
+    <div class="resep-card" data-title="nasi goreng">
+        <h3>Nasi Goreng</h3>
+        <p>Nasi goreng sederhana dan lezat.</p>
+        <button onclick="openQA('Nasi Goreng')">Tanya Jawab</button>
+    </div>
+
+    <div class="resep-card" data-title="rendang">
+        <h3>Rendang</h3>
+        <p>Masakan khas Padang berbumbu kaya.</p>
+        <button onclick="openQA('Rendang')">Tanya Jawab</button>
+    </div>
+
+    <div class="resep-card" data-title="soto ayam">
+        <h3>Soto Ayam</h3>
+        <p>Soto ayam kuning segar.</p>
+        <button onclick="openQA('Soto Ayam')">Tanya Jawab</button>
+    </div>
+</main>
+
+<section id="qa-section" class="hidden">
+    <h2 id="qa-title"></h2>
+    <textarea id="question" placeholder="Tulis pertanyaan..."></textarea>
+    <button onclick="submitQuestion()">Kirim Pertanyaan</button>
+    <div id="qa-list"></div>
+</section>
+
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
